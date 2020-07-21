@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {validEmailRegex, validPasswordRegex, requiredRegex} from '../shared/Validation.js'
 import URL from '../shared/Url.js';
-import FormInput from '../common/FormInput.js'
-import Button from '../common/Button.js'
+import FormInput from '../presenters/FormInput.js'
+import Button from '../presenters/Button.js'
 import axios from 'axios';
 
 
