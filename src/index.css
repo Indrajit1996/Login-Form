@@ -203,6 +203,33 @@ input.error-input {
   font-weight: 550;
 }
 
+.spinner-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 56px;
+  width: 56px;
+  margin: -28px;
+  animation: fadeIn 0.5s linear;
+}
+.spinner-loader:before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: 2px solid rgba(0, 0, 0, .05);
+  border-right: 2px solid rgba(0, 0, 0, .05);
+  border-bottom: 2px solid rgba(0, 0, 0, .05);
+  border-left: 2px solid #0278f8;
+  box-sizing: border-box;
+  animation: spinnerAnimation 0.8s infinite linear;
+}
+
+@keyframes spinnerAnimation {
+  to {transform: rotate(360deg);}
+}
 
 
 

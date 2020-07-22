@@ -14,6 +14,7 @@ const inputStates = {
         password: ''
     },
     success: '',
+    loading: false,
     submitted: false
 }
 
@@ -52,18 +53,18 @@ function Login() {
 
     function hideModal()
     {
-        setStatesManager(prevState => ({ ...prevState, email: '', password: '', submitted: false}));
+        setStatesManager(prevState => ({ ...prevState, email: '', password: '', submitted: false, loading: false}));
     }
 
     function handleSubmit() {
         axios.get(URL.LOGIN())
             .then(response => {
-                setStatesManager(prevState => ({ ...prevState, success: response.data, submitted: true}));
+                setStatesManager(prevState => ({ ...prevState, success: response.data, submitted: true, loading: true}));
             })
             setTimeout(() => {hideModal()}, 3000);
     }
 
-    let {email, password, errors, submitted} = statesManager;
+    let {email, password, errors, submitted, loading} = statesManager;
 
     return (
         <div className="container">
@@ -106,6 +107,7 @@ function Login() {
                     className={errors.password.length > 0 || errors.email.length > 0 || password == '' || email == '' ? "push_button red isDisabled" : "push_button red" }
                     handleClick={handleSubmit}
                     disabled={errors.password.length > 0 || errors.email.length > 0 || password == '' || email == '' ? true : false}
+                    loading={loading}
                   />
                   {
                       submitted == true ?
