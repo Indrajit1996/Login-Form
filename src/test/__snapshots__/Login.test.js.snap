@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component Matches the snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="center card"
+  >
+    <h3>
+      <div
+        className="logo-box"
+      >
+        <img
+          alt="logo"
+          src="https://s3.ap-south-1.amazonaws.com/tpng-images/random/original/6be52f0b-56bf-4fdc-abd3-0bec9e58610c.png"
+        />
+      </div>
+      <div
+        className="sign-in"
+      >
+        Sign In 
+      </div>
+      <div
+        className="title"
+      >
+        Use your Healthifyme Account 
+      </div>
+    </h3>
+    <label
+      htmlFor="email"
+    />
+    <input
+      className="input"
+      id="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Enter Your Email"
+      style={null}
+      type="email"
+      value=""
+    />
+    
+    <label
+      htmlFor="password"
+    />
+    <input
+      className="input"
+      id="password"
+      name="password"
+      onChange={[Function]}
+      placeholder="Enter Your Password"
+      style={null}
+      type="password"
+      value=""
+    />
+    
+    <button
+      className="push_button red isDisabled"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;
